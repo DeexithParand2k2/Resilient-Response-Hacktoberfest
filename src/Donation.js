@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Navbar from './components/Nav/Navbar';
 import Footer from './Footer';
 import image from './assets/logo2.jpg';
+import donationImg from './assets/donation_img.jpg'
 
 const MainContainer = styled.div`
   height: 100%;
@@ -72,6 +73,27 @@ const GiftBoxImage = styled.img`
   margin-bottom: 1rem;
 `;
 
+
+const Title = styled.h1`
+  color: #212529;
+  font-size: 2rem;
+  margin: 20px 0;
+`;
+
+const Description = styled.p`
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 20px 0;
+`;
+
+const DonationImageContainer = styled.img`
+  width: 600px;
+  height: 400px;
+  align-self: center;
+  object-fit: cover;
+  margin-bottom: 1rem;
+`;
+
 // Two main donation components
 
 const InkindDonation = ({donationType,setDonationType}) => (
@@ -111,6 +133,13 @@ const MonetaryDonation = ({donationType,setDonationType}) => (
   <>
     <MainContainer>
         <h1 style={{ color: '#1a2a6c' }}>Disaster Monetary Donation</h1>
+        <Title>How Your Donation Helps</Title>
+        <Description>
+          A resilient response is the key to thriving. By embracing change, learning from challenges, and innovating in the midst of uncertainty.
+          Resilient Response is a disaster management system that focuses on building resilient communities that are prepared to withstand and recover from natural disasters. Your generous donations play a crucial role in our mission. They help us in building resilient communities, providing disaster preparedness, and ensuring an effective response to natural disasters. With your support, we can minimize damage and save lives.
+        </Description>
+        <DonationImageContainer src={donationImg} alt="donation_img" />
+
         <InkindDonationButton donationType={donationType} setDonationType={setDonationType} />
     </MainContainer>
   </>
